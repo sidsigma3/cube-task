@@ -111,13 +111,21 @@ document.addEventListener("DOMContentLoaded", () => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           startCounter(entry.target);
-          obs.unobserve(entry.target); // run only once
+          obs.unobserve(entry.target); 
         }
       });
     },
-    { threshold: 0.6 } // 60% visible
+    { threshold: 0.6 } 
   );
 
   counters.forEach(counter => observer.observe(counter));
+
+   const hamburger = document.getElementById("hamburger");
+  const nav = document.getElementById("nav");
+
+  hamburger.addEventListener("click", () => {
+    nav.classList.toggle("active");
+    hamburger.classList.toggle("open");
+  });
 
 });

@@ -9,32 +9,34 @@
 </head>
 <body>
     <div class="hero-sec">
-    <header>
-        <div class="logo-ctn">
-            <img src="./assets/logo.png" alt="Logo">
-        </div>
+    <header class="header">
+  <div class="logo-ctn">
+    <img src="./assets/logo.png" alt="Logo">
+  </div>
 
-        <div class="nav">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Shop</a></li>
-                <li><a href="#">Fragrances</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Contact</a></li>
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
 
-            </ul>
-        </div>
+  <nav class="nav" id="nav">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Shop</a></li>
+      <li><a href="#">Fragrances</a></li>
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
 
-        <div class="btn-ctn">
-            <div>
-                <img src="./assets/search-icon.png" alt="Cart">
-            </div>
-            <div class="btn-shopNow">
-                <button id="myButton">Shop Now</button>
-            </div>
-        </div>
-    </header>
+  <div class="btn-ctn">
+    <img src="./assets/search-icon.png" alt="Search">
+    <button id="myButton" class="btn-shopNow" style="border: none; cursor: pointer;">Shop Now</button>
+  </div>
+</header>
+
 
     <div class="left-sec">
         <div class="award-ctn">
@@ -122,8 +124,8 @@
                     </div>
 
 
-                    <div class="subscription single-sub-sec active" style="border: 1px solid #B8B8B8; border-radius: 6px; margin-bottom: 10px;">
-                        <div class="top-sec">
+                    <div class="subscription single-sub-sec active" style="border: 1px solid #B8B8B8; border-radius: 6px; margin-bottom: 10px; border-top-left-radius: 0; border-top-right-radius: 0;">
+                        <div class="top-sec" style="border-top-left-radius: 0; border-top-right-radius: 0;">
                             <div>
                                 <input type="radio" id="size1" name="size" value="50ml" checked>
                                 <label for="size1">Single Subscription</label>
@@ -142,7 +144,7 @@
                         <div class="choose-sec choose-sec-fragrance">
                             <h5>Choose a Fragrance</h5>
                             <div class="item-list">
-                                <div class="item-ctn">
+                                <div class="item-ctn" style="position: relative;">
                                     <div class="btn-ctn">
                                         <input type="radio" id="fragrance1" name="fragrance" value="fragrance1" checked>
                                         <label for="fragrance1">Original</label>
@@ -151,6 +153,10 @@
 
                                     <div class="img-ctn">
                                     <img src="./assets/pro-1.png" alt="fragrance1">
+                                    </div>
+
+                                    <div class="best-seller" style="display: flex; justify-content: center; align-items: center; border-top-left-radius: 5px; border-bottom-right-radius: 5px; padding: 3px; position: absolute; top: -4px; right: -10px; background: linear-gradient(180deg, #032E15 0%, #016630 100%);">
+                                        <text style="font-size: 7.37px; font-weight: 700; color: white;">BEST-SELLER</text>
                                     </div>
 
                                 </div>
@@ -259,9 +265,9 @@
                <div class="subscription-body">
 
                         <div class="choose-sec choose-sec-fragrance">
-                            <h5>Choose a Fragrance 1</h5>
+                            <h5 style="margin-bottom: 3vh; margin-top: 2vh;">Choose a Fragrance 1</h5>
                             <div class="item-list">
-                                <div class="item-ctn">
+                                <div class="item-ctn" style="position: relative;">
                                     <div class="btn-ctn">
                                         <input type="radio" id="fragrance1" name="fragrance" value="fragrance1" checked>
                                         <label for="fragrance1">Original</label>
@@ -270,6 +276,10 @@
 
                                     <div class="img-ctn">
                                     <img src="./assets/pro-1.png" alt="fragrance1">
+                                    </div>
+
+                                    <div class="best-seller" style="display: flex; justify-content: center; align-items: center; border-top-left-radius: 5px; border-bottom-right-radius: 5px; padding: 3px; position: absolute; top: -4px; right: -10px; background: linear-gradient(180deg, #032E15 0%, #016630 100%);">
+                                        <text style="font-size: 7.37px; font-weight: 700; color: white;">BEST-SELLER</text>
                                     </div>
 
                                 </div>
@@ -303,9 +313,9 @@
 
 
                         <div class="choose-sec choose-sec-fragrance">
-                            <h5>Choose a Fragrance 2</h5>
+                            <h5 style="margin-bottom: 3vh; margin-top: 2vh;">Choose a Fragrance 2</h5>
                             <div class="item-list">
-                                <div class="item-ctn">
+                                <div class="item-ctn" style="position: relative;">
                                     <div class="btn-ctn">
                                         <input type="radio" id="fragrance1" name="fragrance" value="fragrance1" checked>
                                         <label for="fragrance1">Original</label>
@@ -314,6 +324,10 @@
 
                                     <div class="img-ctn">
                                     <img src="./assets/pro-1.png" alt="fragrance1">
+                                    </div>
+
+                                    <div class="best-seller" style="display: flex; justify-content: center; align-items: center; border-top-left-radius: 5px; border-bottom-right-radius: 5px; padding: 3px; position: absolute; top: -4px; right: -10px; background: linear-gradient(180deg, #032E15 0%, #016630 100%);">
+                                        <text style="font-size: 7.37px; font-weight: 700; color: white;">BEST-SELLER</text>
                                     </div>
 
                                 </div>

@@ -31,6 +31,7 @@ header {
         display: flex;
         gap: 20px;
         align-items: center;
+       
         .btn-shopNow{
             height: 49px;
             width: 145px;
@@ -39,10 +40,10 @@ header {
             display: flex;
             justify-content: center;
             align-items: center;
+            color: white;
             button{
                 background-color: transparent;
                 border: none;
-                color: white;
                 font-size: 18.2px;
                 line-height: 16.18px;
                 font-weight: 500;
@@ -53,6 +54,20 @@ header {
 
 }
 
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 24px;
+  height: 2px;
+  background: #111;
+  transition: 0.3s;
+}
+
 .nav ul{
     display: flex;
     justify-content: space-between;
@@ -61,8 +76,16 @@ header {
     a{
         text-decoration: none;
         color: #162456;
-;
+
     }
+}
+
+.btn-ctn button:hover{
+    color:#003d1f;
+}
+
+.nav ul li :hover{
+    color: white;
 }
 
 header h1 {
@@ -124,7 +147,7 @@ header h1 {
 
 .shopnow-btn{
         height: 49px;
-        width: 145px;
+        width: 150px;
         background: linear-gradient(180deg, #032E15 0%, #016630 100%);
         border-radius: 505.64px;
         display: flex;
@@ -138,6 +161,10 @@ header h1 {
             line-height: 16.18px;
             font-weight: 500;
         }
+}
+
+.shopnow-btn button:hover{
+    color: #003d1f;
 }
 
 
@@ -242,7 +269,7 @@ main{
 
 
                     input[type="radio"]{
-                        color: #032E15;
+                        accent-color: #032E15;
                         margin: 0;
                     }
 
@@ -275,6 +302,7 @@ main{
                     font-size: 18px;
                     font-weight: 300;
                     color: #032E15;
+                    margin-bottom: 3vh;
                 }
 
                 label{
@@ -345,6 +373,7 @@ main{
                     input[type="radio"]{
                         color: #0D542B;
                         margin: 0;
+                        accent-color: #032E15;
                     }
 
                     label{
@@ -433,6 +462,7 @@ main{
                     input[type="radio"]{
                         color: #032E15;
                         margin: 0;
+                        accent-color: #032E15;
                     }
 
                     h5{
@@ -534,6 +564,7 @@ main{
                     input[type="radio"]{
                         color: #0D542B;
                         margin: 0;
+                        accent-color: #032E15;
                     }
 
                     label{
@@ -986,6 +1017,34 @@ body {
 
 
 @media (max-width: 990px) {
+    .hamburger {
+    display: flex;
+  }
+
+  .nav {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .nav.active {
+    max-height: 400px;
+  }
+
+  .btn-ctn {
+    display: none;
+  }
     
     .product-sec{
         flex-direction: column;
@@ -997,6 +1056,15 @@ body {
         .right-sec{
             width: 100% !important;
         }
+    }
+
+    .prev { 
+        left: 20px; 
+        top: 95%;
+    }
+    .next { 
+        right: 20px; 
+        top: 95%;
     }
 
     .collection-ctn{
