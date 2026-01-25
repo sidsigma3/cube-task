@@ -16,8 +16,8 @@ body {
     background-repeat: no-repeat;
     top: 0;
     z-index: 1;
-
 }
+
 
 header {
     color: white;
@@ -33,7 +33,7 @@ header {
         align-items: center;
        
         .btn-shopNow{
-            height: 49px;
+            height: 40px;
             width: 145px;
             background: linear-gradient(180deg, #032E15 0%, #016630 100%);
             border-radius: 505.64px;
@@ -153,6 +153,7 @@ header h1 {
         display: flex;
         justify-content: center;
         align-items: center;
+        cursor: pointer;
         button{
             background-color: transparent;
             border: none;
@@ -160,11 +161,16 @@ header h1 {
             font-size: 18.2px;
             line-height: 16.18px;
             font-weight: 500;
+            cursor: pointer;
         }
 }
 
+.shopnow-btn:hover{
+  color: #3fc07f !important;
+}
+
 .shopnow-btn button:hover{
-    color: #003d1f;
+    color: #3fc07f;
 }
 
 
@@ -325,7 +331,7 @@ main{
                     display: flex;
                     gap: 20px;
 
-                    .left-sec{
+                    .left-sec-every{
                         display: flex;
                         flex-direction: column;
                         justify-content: space-between;
@@ -414,6 +420,10 @@ main{
                     font-size: 14px;
                     font-weight: 300;
                     color: #032E15;
+
+                    img{
+                      margin-bottom: -2px;
+                    }
                 }
             }
 
@@ -437,6 +447,19 @@ main{
             .subscription.active .subscription-body {
             max-height: 1000px;
             }
+
+      .purchase-option {
+        cursor: pointer;
+        border: 1px solid #ddd;
+        padding: 12px;
+        border-radius: 8px;
+      }
+
+      .purchase-option.active {
+        border-color: #032E15;
+        background: #deffee;
+      }
+
 
     .double-sub-sec{
             display: flex;
@@ -516,7 +539,7 @@ main{
                     display: flex;
                     gap: 20px;
 
-                    .left-sec{
+                    .left-sec-every{
                         display: flex;
                         flex-direction: column;
                         justify-content: space-between;
@@ -605,6 +628,10 @@ main{
                     font-size: 14px;
                     font-weight: 300;
                     color: #032E15;
+
+                    img{
+                      margin-bottom: -2px;
+                    }
                 }
             }
 
@@ -634,6 +661,10 @@ main{
 
     .right-img-ctn{
         width: 50%;
+
+        img{
+          width: -webkit-fill-available;
+        }
     }
 
 
@@ -667,7 +698,6 @@ main{
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
-  margin-bottom: 3vh;
 }
 
 .toggle-btn {
@@ -719,7 +749,7 @@ main{
 }
 
 
-.nav {
+.nav-scroll {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -820,7 +850,7 @@ body {
 }
 
 .comparison {
-  padding: 80px 40px;
+  padding: 60px 100px;
 }
 
 .comparison h2 {
@@ -834,13 +864,29 @@ body {
   grid-template-columns: 220px repeat(4, 1fr);
   max-width: 1200px;
   margin: auto;
+  
+}
+
+.table-top {
+  display: grid;
+  grid-template-columns: 220px repeat(4, 1fr);
+  max-width: 1200px;
+  margin: auto;
+  border-bottom: 1px solid #222;
 }
 
 .col {
   display: grid;
-  grid-template-rows: repeat(9, 60px);
+  grid-template-rows: repeat(8, 60px);
   text-align: center;
 }
+
+.col-top {
+  display: grid;
+  grid-template-rows: repeat(1, 143px);
+  text-align: center;
+}
+
 
 .labels {
   text-align: left;
@@ -848,6 +894,14 @@ body {
 }
 
 .cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #222;
+  font-size: 14px;
+}
+
+.cell-top {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -860,31 +914,59 @@ body {
   padding-left: 10px;
 }
 
+.labels-top .cell-top {
+  justify-content: flex-start;
+  padding-left: 10px;
+}
+
 .head {
-  height: 120px;
   border-bottom: none;
   flex-direction: column;
   gap: 10px;
-  height: 50px;
+  height: 2vh;
+}
+
+.head-top {
+  border-bottom: none;
+  flex-direction: column;
+  gap: 10px;
+  height: 20vh;
 }
 
 .head img {
-  width: 48px;
-  height: 48px;
+  width: 87px;
+  height: 88px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.head-top img {
+  width: 87px;
+  height: 88px;
   border-radius: 12px;
   object-fit: cover;
 }
 
 .highlight {
   background: #F0FDF4;
-  border-radius: 16px;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  color: #003d1f;
+  
+}
+
+.highlight-top {
+  background: #F0FDF4;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
   color: #003d1f;
   
 }
 
 .highlight .cell {
-  border-bottom: 1px dashed #cfe7d9;
+  border-bottom: 1px dashed #222;
 }
+
 
 .check {
   color: #0b6b3a;
@@ -900,6 +982,10 @@ body {
 }
 
 
+input[type="radio"]{
+  cursor: pointer;
+}
+
 .footer {
   background: linear-gradient(180deg, #032E15 0%, #016630 100%);
   color: #e6f4ec;
@@ -911,7 +997,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  max-width: 1200px;
+  /* max-width: 1200px; */
   margin: auto;
   gap: 80px;
 }
@@ -921,6 +1007,7 @@ body {
   font-size: 32px;
   margin-bottom: 24px;
   color: #fff;
+  margin: 3vh 0;
 }
 
 .links {
@@ -962,7 +1049,7 @@ body {
 
 
 .footer-right {
-  max-width: 420px;
+  /* max-width: 420px; */
 }
 
 .footer-right h4 {
@@ -1040,6 +1127,11 @@ body {
 
   .nav.active {
     max-height: 400px;
+    background-color: #003d1f;
+  }
+
+  .nav ul li a{
+    color:#bbb
   }
 
   .btn-ctn {
@@ -1083,6 +1175,7 @@ body {
     }
 
     .benner-ctn{
+      padding: 5vw !important;
         ul{
             flex-direction: column !important;
 
@@ -1096,17 +1189,119 @@ body {
     }
 
 
+.left-sec h3{
+    font-size: 46px !important;
+}
+
+
+.metrics-ctn h4{
+    font-size: 52px !important;
+}    
+
+
+.metrics-ctn text{
+    font-size: 18px !important;
+}
+
+
+.comparison {
+  padding: 60px 40px;
+}
+
+
+.table{
+
+grid-template-columns: 152px repeat(4, 1fr) !important;
+
+}
+
+.table-top{
+
+grid-template-columns: 152px repeat(4, 1fr) !important;
+
+}
+
+
+.shopnow-btn{
+        height: 38px;
+        width: 130  px;
+        background: linear-gradient(180deg, #032E15 0%, #016630 100%);
+        border-radius: 505.64px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        button{
+            background-color: transparent;
+            border: none;
+            color: white;
+            font-size: 16.2px;
+            line-height: 16.18px;
+            font-weight: 500;
+            cursor: pointer;
+        }
+}
+
+
   .footer-container {
     flex-direction: column;
     gap: 40px;
   }
 
+  .footer-container .footer-left{
+    width: 100%;
+  }
+
+  .footer-container .footer-right{
+    width: 100%;
+  }
+
   .links {
     gap: 40px;
+    justify-content: space-between !important;
   }
 }
 
 @media (max-width: 767px) {
+
+
+.comparison {
+  padding: 60px 30px !important;
+}
+
+
+.table{
+
+grid-template-columns: 120px repeat(4, 1fr) !important;
+
+}
+
+.table-top{
+
+grid-template-columns: 120px repeat(4, 1fr) !important;
+
+}
+
+.head-top img {
+  width: 57px !important;
+  height: 58px !important;
+}
+
+.left-sec h3{
+    font-size: 36px !important;
+}
+
+
+.metrics-ctn h4{
+    font-size: 32px !important;
+}    
+
+
+.metrics-ctn text{
+    font-size: 15px !important;
+}
+
+
+
   .footer-container {
     flex-direction: column;
     gap: 40px;

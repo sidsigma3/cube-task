@@ -77,9 +77,9 @@
             <div class="left-sec">
                 <div class="gallery">
                     <div class="main-image">
-                        <button class="nav prev"><img src="./assets/l-click.png"/></button>
+                        <button class="nav-scroll prev"><img src="./assets/l-click.png"/></button>
                         <img id="currentImage" src="images/pro-1.jpg" alt="product" />
-                        <button class="nav next"><img src="./assets/r-click.png"/></button>
+                        <button class="nav-scroll next"><img src="./assets/r-click.png"/></button>
 
                         <div class="dots" id="dots"></div>
                     </div>
@@ -127,7 +127,7 @@
                     <div class="subscription single-sub-sec active" style="border: 1px solid #B8B8B8; border-radius: 6px; margin-bottom: 10px; border-top-left-radius: 0; border-top-right-radius: 0;">
                         <div class="top-sec" style="border-top-left-radius: 0; border-top-right-radius: 0;">
                             <div>
-                                <input type="radio" id="size1" name="size" value="50ml" checked>
+                                <input type="radio" id="size1" name="size" value="single" checked>
                                 <label for="size1">Single Subscription</label>
                             </div>
 
@@ -146,7 +146,7 @@
                             <div class="item-list">
                                 <div class="item-ctn" style="position: relative;">
                                     <div class="btn-ctn">
-                                        <input type="radio" id="fragrance1" name="fragrance" value="fragrance1" checked>
+                                        <input type="radio" name="fragrance" value="original" checked>
                                         <label for="fragrance1">Original</label>
                                     </div>
                                     
@@ -163,7 +163,7 @@
 
                                 <div class="item-ctn">
                                      <div class="btn-ctn">
-                                        <input type="radio" id="fragrance1" name="fragrance" value="fragrance1" checked>
+                                        <input type="radio"  name="fragrance" value="lily" >
                                         <label for="fragrance1">Lily</label>
                                     </div>
 
@@ -175,7 +175,7 @@
 
                                  <div class="item-ctn">
                                      <div class="btn-ctn">
-                                        <input type="radio" id="fragrance1" name="fragrance" value="fragrance1" checked>
+                                        <input type="radio" name="fragrance" value="rose" >
                                         <label for="fragrance1">Rose</label>
                                     </div>
 
@@ -192,20 +192,20 @@
                             <h5>What’s Included:</h5>
 
                             <div class="duration-ctn">
-                                <div class="left-sec">
+                                <div class="left-sec-every purchase-option active" data-purchase="monthly">
                             
-                                    <label for="fragrance1">Every 30 Days</label>
+                                    <label>Every 30 Days</label>
                             
                                     <img src="./assets/pro-1.png" alt="fragrance1">
 
                                 </div>
 
-                                <div class="img-list-ctn">
+                                <div class="img-list-ctn purchase-option" data-purchase="onetime">
 
                                 
                                    
                         
-                                    <label for="fragrance1">One Time <span style="font-weight: bold;">(Free)</span></label>
+                                    <label>One Time <span style="font-weight: bold;">(Free)</span></label>
                                     
                                         <div class="img-list">
                                     <img src="./assets/pro-1.png" alt="fragrance1">
@@ -252,7 +252,7 @@
             <div class="subscription double-sub-sec" style="border: 1px solid #B8B8B8; border-radius: 6px;">
                 <div class="top-sec">
                     <div>
-                        <input type="radio" id="size2" name="size" value="100ml">
+                        <input type="radio" name="size" value="double">
                         <label for="size2">Double Subscription</label>
                     </div>
 
@@ -269,7 +269,7 @@
                             <div class="item-list">
                                 <div class="item-ctn" style="position: relative;">
                                     <div class="btn-ctn">
-                                        <input type="radio" id="fragrance1" name="fragrance" value="fragrance1" checked>
+                                        <input type="radio" name="fragrance1" value="original" checked>
                                         <label for="fragrance1">Original</label>
                                     </div>
                                     
@@ -286,7 +286,7 @@
 
                                 <div class="item-ctn">
                                      <div class="btn-ctn">
-                                        <input type="radio" id="fragrance1" name="fragrance" value="fragrance1" checked>
+                                        <input type="radio"  name="fragrance1" value="lily">
                                         <label for="fragrance1">Lily</label>
                                     </div>
 
@@ -298,7 +298,7 @@
 
                                  <div class="item-ctn">
                                      <div class="btn-ctn">
-                                        <input type="radio" id="fragrance1" name="fragrance" value="fragrance1" checked>
+                                        <input type="radio"  name="fragrance1" value="rose">
                                         <label for="fragrance1">Rose</label>
                                     </div>
 
@@ -317,13 +317,13 @@
                             <div class="item-list">
                                 <div class="item-ctn" style="position: relative;">
                                     <div class="btn-ctn">
-                                        <input type="radio" id="fragrance1" name="fragrance" value="fragrance1" checked>
-                                        <label for="fragrance1">Original</label>
+                                        <input type="radio"  name="fragrance2" value="original" checked>
+                                        <label for="fragrance2">Original</label>
                                     </div>
                                     
 
                                     <div class="img-ctn">
-                                    <img src="./assets/pro-1.png" alt="fragrance1">
+                                    <img src="./assets/pro-1.png" alt="fragrance2">
                                     </div>
 
                                     <div class="best-seller" style="display: flex; justify-content: center; align-items: center; border-top-left-radius: 5px; border-bottom-right-radius: 5px; padding: 3px; position: absolute; top: -4px; right: -10px; background: linear-gradient(180deg, #032E15 0%, #016630 100%);">
@@ -334,24 +334,24 @@
 
                                 <div class="item-ctn">
                                      <div class="btn-ctn">
-                                        <input type="radio" id="fragrance1" name="fragrance" value="fragrance1" checked>
-                                        <label for="fragrance1">Lily</label>
+                                        <input type="radio"  name="fragrance2" value="lily">
+                                        <label for="fragrance2">Lily</label>
                                     </div>
 
                                     <div class="img-ctn">
-                                    <img src="./assets/pro-2.png" alt="fragrance1">
+                                    <img src="./assets/pro-2.png" alt="fragrance2">
                                     </div>
 
                                 </div>
 
                                  <div class="item-ctn">
                                      <div class="btn-ctn">
-                                        <input type="radio" id="fragrance1" name="fragrance" value="fragrance1" checked>
-                                        <label for="fragrance1">Rose</label>
+                                        <input type="radio"  name="fragrance2" value="rose">
+                                        <label for="fragrance2">Rose</label>
                                     </div>
 
                                     <div class="img-ctn">
-                                    <img src="./assets/pro-3.png" alt="fragrance1">
+                                    <img src="./assets/pro-3.png" alt="fragrance2">
                                        </div> 
 
                                 </div>
@@ -364,7 +364,7 @@
                             <h5>What’s Included:</h5>
 
                             <div class="duration-ctn">
-                                <div class="left-sec">
+                                <div class="left-sec-every purchase-option active" data-purchase="monthly">
                             
                                     <label for="fragrance1">Every 30 Days</label>
                             
@@ -372,7 +372,7 @@
 
                                 </div>
 
-                                <div class="img-list-ctn">
+                                <div class="img-list-ctn purchase-option" data-purchase="onetime">
 
                                 
                                    
@@ -399,7 +399,8 @@
                     <ul class="info-list">
                         <li>
                             <img src="./assets/tick.png"/>
-                            1 bottle shipped monthly</li>
+                            1 bottle shipped monthly
+                        </li>
                         <li>
                             <img src="./assets/tick.png"/>
                            <span style="font-weight: bold;">Free</span>  Sampler for original, lily and rose fragrances</li>
@@ -423,15 +424,15 @@
            
             
 
-            <div class="shopnow-btn" style="margin-top: 10px; width: 100%;">
-                <button id="myButton">Add to Cart</button>
+            <div class="shopnow-btn" id="addToCart" style="margin-top: 20px; width: 100%;">
+                <button  href="#" class="add-to-cart-btn">Add to Cart</button>
             </div>
              </div>
        </div>
 
        <div class="collection-ctn">
         <div class="drop-ctn">
-            <h5>Our Collection</h5>
+            <h5 style="margin-top: 5vh;">Our Collection</h5>
 
            <ul class="accordion">
             <li class="list-ctn active">
@@ -524,14 +525,50 @@
 
 
 
-       <section class="comparison">
-        <h2>---</h2>
-  <h2>Why GTG is the #1 Choice</h2>
+   <section class="comparison">
+        <h2 style="margin-top: 0;">---</h2>
+        <h2>Why GTG is the #1 Choice</h2>
+
+
+    <div class="table-top">
+        <div class="col-top labels-top" style="font-weight: 700; font-size: 16px;">
+            <div class="cell-top head-top" style="display: flex; justify-content: space-between; align-items: center; flex-direction: row;">Qualities</div>
+        </div>
+
+         <div class="col-top highlight-top">
+             <div class="cell-top head-top" style="margin-top: 13px;">
+                <img src="./assets/pro-4.png" />
+                <span style="font-size: 20px; font-weight: 300; padding-bottom: 20px;" >GTG</span>
+            </div>
+         </div>
+
+         <div class="col-top">
+            <div class="cell-top head-top">
+                <img src="./assets/pro-5.png" />
+                <span>Arose</span>
+            </div>
+         </div>
+
+         <div class="col-top">
+            <div class="cell-top head-top">
+                <img src="./assets/pro-6.png" />
+                <span>Bella</span>
+            </div>
+        </div>
+
+        <div class="col-top">
+             <div class="cell-top head-top">
+                <img src="./assets/pro-7.png" />
+                <span>Daisies</span>
+            </div>
+        </div>
+
+    </div>
 
   <div class="table">
   
     <div class="col labels" style="font-weight: 700; font-size: 16px;">
-      <div class="cell head">Qualities</div>
+      <!-- <div class="cell head" style="display: flex; justify-content: space-between; align-items: center; flex-direction: row;">Qualities</div> -->
       <div class="cell">Potency Concentration</div>
       <div class="cell">Longevity</div>
       <div class="cell">Sillage</div>
@@ -544,10 +581,10 @@
 
    
     <div class="col highlight">
-      <div class="cell head">
+      <!-- <div class="cell head">
         <img src="./assets/pro-4.png" />
         <span>GTG</span>
-      </div>
+      </div> -->
       <div class="cell">10x</div>
       <div class="cell check"><img src="./assets/correct.svg"/></div>
       <div class="cell check"><img src="./assets/correct.svg"/></div>
@@ -560,10 +597,10 @@
 
    
     <div class="col">
-      <div class="cell head">
+      <!-- <div class="cell head">
         <img src="./assets/pro-5.png" />
         <span>Arose</span>
-      </div>
+      </div> -->
       <div class="cell">1x</div>
       <div class="cell cross"><img src="./assets/wrong.png"/></div>
       <div class="cell cross"><img src="./assets/wrong.png"/></div>
@@ -576,10 +613,10 @@
 
    
     <div class="col">
-      <div class="cell head">
+      <!-- <div class="cell head">
         <img src="./assets/pro-6.png" />
         <span>Bella</span>
-      </div>
+      </div> -->
       <div class="cell">1x</div>
       <div class="cell cross"><img src="./assets/wrong.png"/></div>
       <div class="cell cross"><img src="./assets/wrong.png"/></div>
@@ -592,10 +629,10 @@
 
    
     <div class="col">
-      <div class="cell head">
+      <!-- <div class="cell head">
         <img src="./assets/pro-7.png" />
         <span>Daisies</span>
-      </div>
+      </div> -->
       <div class="cell">10x</div>
       <div class="cell check"><img src="./assets/correct.svg"/></div>
       <div class="cell cross"><img src="./assets/wrong.png"/></div>
@@ -618,11 +655,14 @@
     </main>
 
     <footer class="footer">
+
+    <h2 class="logo">GTG</h2>
+
   <div class="footer-container">
 
    
     <div class="footer-left">
-      <h2 class="logo">GTG</h2>
+      
 
       <div class="links">
         <ul>

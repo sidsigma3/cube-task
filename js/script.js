@@ -38,6 +38,10 @@ document.addEventListener("DOMContentLoaded", () => {
     "./assets/pro-4.png",
     "./assets/pro-5.png",
     "./assets/pro-6.png",
+    "./assets/pro-7.png",
+     "./assets/pro-4.png",
+    "./assets/pro-5.png",
+    "./assets/pro-6.png",
     "./assets/pro-7.png"
   ];
 
@@ -127,5 +131,75 @@ document.addEventListener("DOMContentLoaded", () => {
     nav.classList.toggle("active");
     hamburger.classList.toggle("open");
   });
+
+
+  const addToCartBtn = document.getElementById("addToCart");
+
+  sizeRadios.forEach(radio => {
+    radio.addEventListener("change", () => {
+      subscriptions.forEach(sub => sub.classList.remove("active"));
+      radio.closest(".subscription")?.classList.add("active");
+      updateAddToCart();
+    });
+  });
+
+
+  document.querySelectorAll(".purchase-option").forEach(option => {
+    option.addEventListener("click", () => {
+      const parent = option.closest(".subscription");
+      parent.querySelectorAll(".purchase-option")
+        .forEach(o => o.classList.remove("active"));
+
+      option.classList.add("active");
+      updateAddToCart();
+    });
+  });
+
+  document.querySelectorAll(
+    'input[name="fragrance"],input[name="fragrance1"], input[name="fragrance2"]'
+  ).forEach(radio => {
+    radio.addEventListener("change", updateAddToCart);
+  });
+
+  function updateAddToCart() {
+    const activeSub = document.querySelector(".subscription.active");
+    if (!activeSub) return;
+
+    const type = activeSub.querySelector('input[name="size"]')?.value;
+
+
+    const fragrance = activeSub.querySelector(
+      'input[name="fragrance"]:checked'
+    )?.value;
+
+    const fragrance1 = activeSub.querySelector(
+      'input[name="fragrance1"]:checked'
+    )?.value;
+
+    const fragrance2 = activeSub.querySelector(
+      'input[name="fragrance2"]:checked'
+    )?.value;
+
+    const purchase = activeSub.querySelector(".purchase-option.active")
+      ?.dataset.purchase;
+
+    if (!type || !purchase) return;
+
+    let link = `/cart?type=${type}&purchase=${purchase}`;
+
+     if (fragrance) link += `&fragrance=${fragrance}`;
+    if (fragrance1) link += `&fragrance1=${fragrance1}`;
+    if (fragrance2) link += `&fragrance2=${fragrance2}`;
+
+    addToCartBtn.dataset.link = link;
+    console.log("Add to cart:", link);
+  }
+
+
+  addToCartBtn.addEventListener("click", () => {
+    alert(addToCartBtn.dataset.link);
+  });
+
+  updateAddToCart();
 
 });
